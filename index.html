@@ -203,81 +203,172 @@
 
 
 
+
         <!-- MANIFESTO SECTION -->
-        <section class="py-32 px-6 bg-white/20">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                <div class="reveal">
-                    <img src="assets/images/00.png" alt="Floral divider" class="w-30 mb-12 opacity-50">
-                    <h2 class="font-serif text-4xl md:text-6xl text-maatrika-maroon mb-10 italic">
-                        No shortcuts. No noise.
+        <section class="relative py-32 px-6 bg-maatrika-beige overflow-hidden">
+            <!-- Decorative Watermark (Subtle "M" or Logo behind text) -->
+            <div class="absolute top-1/2 left-10 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none">
+                <h2 class="text-[20rem] font-serif text-maatrika-maroon">M</h2>
+            </div>
+
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Left Column: The Narrative (Col 1-5) -->
+                <div class="lg:col-span-5 reveal z-10 order-2 lg:order-1">
+                    <div class="flex items-center gap-4 mb-8 opacity-60">
+                        <div class="w-12 h-[1px] bg-maatrika-gold"></div>
+                        <span class="text-maatrika-gold uppercase text-[10px] tracking-[0.5em]">Our Philosophy</span>
+                    </div>
+
+                    <h2 class="font-serif text-5xl md:text-7xl text-maatrika-maroon mb-10 leading-[1.1]">
+                        No shortcuts.<br>
+                        <span class="italic font-light">No noise.</span>
                     </h2>
-                    <p class="text-gray-700 leading-loose font-light text-lg mb-8">
-                        Generations of artisans in Varanasi have been quietly perfecting a craft the world once paused
-                        to admire. We exist to bring that back, thread by thread.
-                    </p>
+
+                    <div class="space-y-6">
+                        <p class="text-maatrika-maroon/80 leading-relaxed font-sans font-light text-lg">
+                            Generations of artisans in Varanasi have been quietly perfecting a craft the world once
+                            paused
+                            to admire. At House of Maatrika, we don’t just curate; we revive.
+                        </p>
+                        <p class="text-maatrika-maroon/80 leading-relaxed font-sans font-light text-lg">
+                            Every weave is rare, untouched, and alive with the hands that made it. We exist to bring
+                            that back,
+                            <span class="text-maatrika-gold font-medium italic">thread by thread</span>, without
+                            diluting it to fit trends.
+                        </p>
+                    </div>
+
+                    <!-- Signature-style Button -->
+                    <div class="mt-12">
+                        <a href="#" class="inline-flex items-center gap-6 group">
+                            <span
+                                class="text-maatrika-maroon uppercase text-[11px] tracking-[0.4em] border-b border-maatrika-gold/30 pb-1 group-hover:border-maatrika-maroon transition-colors duration-500">
+                                The Narrative
+                            </span>
+                            <svg class="w-4 h-4 text-maatrika-gold transform group-hover:translate-x-2 transition-transform duration-500"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="reveal">
-                    <div class="aspect-[4/5] bg-gray-100 overflow-hidden shadow-2xl">
-                        <img src="assets/images/90222.jpg"
-                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-1000 transform hover:scale-105"
-                            alt="Handloom detail">
+
+                <!-- Right Column: The Visual Asset (Col 7-12) -->
+                <div class="lg:col-span-6 lg:col-start-7 reveal order-1 lg:order-2">
+                    <div class="relative group">
+                        <!-- Use your new isolated torn paper circle here -->
+                        <img src="assets/images/90222.jpg" alt="House of Maatrika Heritage"
+                            class="w-full h-auto transform transition-transform duration-[2000ms] ease-out hover:scale-105 drop-shadow-[0_20px_50px_rgba(122,10,36,0.1)]">
+
+                        <!-- Floating Detail Text -->
+                        <div class="absolute -bottom-6 -left-6 bg-white py-6 px-8 shadow-xl hidden md:block">
+                            <p class="font-serif italic text-maatrika-maroon text-xl italic leading-tight">
+                                "The purity of <br>the weave."
+                            </p>
+                            <p class="text-maatrika-gold text-[9px] uppercase tracking-widest mt-2">Authenticity
+                                Verified</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- ARTISAN IMMERSIVE SECTION -->
+        <section class="relative bg-maatrika-maroon py-32 md:py-48 overflow-hidden">
+
+            <!-- Subtle Decorative Background Text -->
+            <div class="absolute top-10 right-10 opacity-10 pointer-events-none select-none">
+                <p class="text-maatrika-beige font-serif text-[12rem] rotate-90 origin-top-right leading-none">Varanasi
+                </p>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-8 md:px-20">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+                    <!-- Left: The Visual Window -->
+                    <div class="lg:col-span-6 relative reveal">
+                        <!-- The "Frame" around the image -->
+                        <div
+                            class="relative aspect-[3/4] md:aspect-square overflow-hidden border border-white/10 p-4 md:p-8">
+                            <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+                            <!-- Fixed/Parallax Image -->
+                            <img src="assets/images/90231.jpg"
+                                class="w-full h-full object-cover opacity-80 transition-transform duration-[3000ms] hover:scale-110"
+                                alt="The Weaver at the Loom">
+
+                            <!-- Floating Badge -->
+                            <div
+                                class="absolute top-0 left-0 z-20 bg-maatrika-gold/90 px-4 py-2 translate-x-[-10%] translate-y-[-10%]">
+                                <span class="text-[9px] text-white uppercase tracking-[0.4em] font-light">Hand-Woven
+                                    Presence</span>
+                            </div>
+                        </div>
+
+                        <!-- Technical Detail Overlay -->
+                        <div class="absolute -bottom-10 -right-4 md:-right-10 z-20 reveal"
+                            style="animation-delay: 0.4s;">
+                            <div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-10">
+                                <p class="text-maatrika-gold font-serif text-4xl mb-1">160+</p>
+                                <p class="text-maatrika-beige/60 text-[10px] uppercase tracking-widest leading-relaxed">
+                                    Hours of <br>Uninterrupted <br>Concentration
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: The Copy -->
+                    <div class="lg:col-span-5 lg:col-start-8 reveal">
+                        <div class="mb-8">
+                            <span class="text-maatrika-gold text-xs uppercase tracking-[0.6em] mb-4 block">The
+                                Artisans</span>
+                            <h2 class="font-serif text-5xl md:text-7xl text-maatrika-beige italic leading-tight">
+                                Where time <br>stands still.
+                            </h2>
+                        </div>
+
+                        <div class="space-y-8">
+                            <p class="text-maatrika-beige/70 leading-loose font-light text-lg">
+                                Each House of Maatrika saree is a testament to a patience the modern world has
+                                forgotten.
+                                Our artisans do not count the hours; they count the threads.
+                            </p>
+
+                            <p class="text-maatrika-beige/70 leading-loose font-light text-lg">
+                                They pour their heart into every warp and weft, turning raw silk into a living legacy.
+                                This is not manufacturing. This is <span
+                                    class="text-maatrika-gold italic">devotion.</span>
+                            </p>
+                        </div>
+
+                        <!-- Navigation link -->
+                        <div class="mt-16">
+                            <a href="#" class="inline-flex items-center gap-4 group">
+                                <div
+                                    class="w-10 h-10 rounded-full border border-maatrika-gold/30 flex items-center justify-center group-hover:bg-maatrika-gold transition-all duration-500">
+                                    <svg class="w-4 h-4 text-maatrika-gold group-hover:text-maatrika-maroon" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M12 4v16m8-8H4" />
+                                    </svg>
+                                </div>
+                                <span class="text-maatrika-beige uppercase text-[10px] tracking-[0.4em] font-light">Meet
+                                    the Masters</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section class="relative overflow-hidden bg-maatrika-maroon py-40">
-
-            <!-- Background Image -->
-            <div class="absolute inset-0 bg-cover bg-center bg-fixed opacity-40 scale-110"
-                style="background-image: url('assets/images/90231.jpg');">
-            </div>
-
-            <!-- Dark Overlay -->
-            <div class="absolute inset-0 bg-black/30"></div>
-
-            <!-- Content -->
-            <div class="container relative z-10 mx-auto px-6 reveal">
-                <div class="reveal max-w-3xl">
-                    <h2 class="font-serif text-4xl md:text-6xl text-maatrika-beige mb-10 italic">
-                        The Artisans of Varanasi
-                    </h2>
-
-                    <p class="text-gray-300 leading-loose font-light text-lg mb-8">
-                        Each saree is a testament to the skill and dedication of our artisans,
-                        who pour their heart into every thread.
-                    </p>
-                </div>
-            </div>
-
-        </section>
-        
-
         <footer class="bg-maatrika-beige ">
-            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 pt-20">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 pt-20 pb-12">
                 <!-- Address -->
                 <div class="reveal">
                     <h4 class="font-serif text-3xl text-maatrika-maroon mb-4 italic">The Presence</h4>
