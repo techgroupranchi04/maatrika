@@ -138,53 +138,70 @@
             </div>
         </nav>
 
-        <!-- HERO SECTION: MODERN ASYMMETRY -->
-        <section class="relative min-h-screen flex flex-col justify-between py-20 px-8 md:px-20 bg-maatrika-beige">
+        <section
+            class="relative min-h-screen flex flex-col justify-between py-12 px-8 md:px-20 overflow-hidden bg-maatrika-beige">
 
-            <!-- Top Row: Origin -->
-            <div class="flex justify-between items-start">
+            <!-- TOP ROW: ORIGIN & LOGO AREA -->
+            <div class="flex justify-between items-start z-20">
                 <div class="reveal">
                     <p class="text-maatrika-maroon font-serif italic text-xl">The Rare & The Original</p>
                 </div>
                 <div class="text-right reveal">
-                    <p class="text-maatrika-gold text-[10px] uppercase tracking-[0.5em]">25.28° N, 82.95° E</p>
+                    <p class="text-maatrika-gold text-[10px] md:text-[12px] uppercase tracking-[0.5em] font-light">
+                        25.28° N, 82.95° E</p>
                     <p class="text-maatrika-maroon/50 text-[9px] uppercase tracking-[0.3em] mt-1">Varanasi, India</p>
                 </div>
             </div>
 
-            <!-- Middle: The Core Hook -->
-            <div class="max-w-4xl">
-                <h1 class="font-serif text-5xl md:text-8xl text-maatrika-maroon leading-tight reveal">
-                    What deserves <br>
-                    <span class="text-maatrika-gold italic">to stay.</span>
-                </h1>
-                <p class="mt-8 max-w-md text-maatrika-maroon/80 font-sans text-sm md:text-base leading-relaxed reveal">
-                    In the lanes of Varanasi, generations of artisans have been quietly perfecting a craft the world
-                    once paused to admire. No shortcuts. Just skill, thread by thread.
-                </p>
+            <!-- MAIN CONTENT AREA -->
+            <div class="flex flex-col md:flex-row items-center justify-between flex-grow z-10 gap-12">
+                <div class="max-w-2xl w-full">
+                    <h1 class="font-serif text-6xl md:text-[7rem] text-maatrika-maroon leading-[0.9] reveal">
+                        What deserves <br>
+                        <span class="text-maatrika-gold italic font-light">to stay.</span>
+                    </h1>
+                    <p
+                        class="mt-10 max-w-sm text-maatrika-maroon/80 font-sans text-sm md:text-base leading-relaxed reveal">
+                        In the lanes of Varanasi, generations of artisans have been quietly perfecting a craft the world
+                        once paused to admire. No shortcuts. Just skill, thread by thread.
+                    </p>
+                </div>
+                <div
+                    class="relative w-[360px] h-[360px] md:w-[500px] md:h-[500px] reveal flex items-center justify-center">
+                    <div class="absolute overflow-hidden">
+                        <img src="assets/images/hero.png" alt="House of Maatrika Artisan"
+                            class="w-full h-full object-cover scale-110">
+                    </div>
+
+                </div>
             </div>
 
-            <!-- Bottom: Interaction -->
-            <div class="flex flex-col md:flex-row items-end justify-between gap-8">
+            <!-- BOTTOM ROW: INTERACTION & QUOTE -->
+            <div class="flex flex-col md:flex-row items-end justify-between gap-8 z-20">
                 <div class="reveal">
-                    <a href="#" class="group block border-b border-maatrika-maroon pb-2 overflow-hidden">
+                    <a href="#"
+                        class="group relative block border-b border-maatrika-maroon/30 pb-3 min-w-[220px] overflow-hidden">
                         <span
-                            class="block text-maatrika-maroon uppercase text-[10px] tracking-[0.4em] transform group-hover:-translate-y-full transition-transform duration-500">
+                            class="block text-maatrika-maroon uppercase text-[10px] tracking-[0.4em] transition-all duration-700 ease-in-out group-hover:-translate-y-[150%]">
                             Discover the Collection
                         </span>
                         <span
-                            class="block text-maatrika-gold uppercase text-[10px] tracking-[0.4em] absolute transform translate-y-full group-hover:-translate-y-5 transition-transform duration-500">
+                            class="absolute top-0 left-0 block text-maatrika-gold uppercase text-[10px] tracking-[0.4em] translate-y-[150%] transition-all duration-700 ease-in-out group-hover:translate-y-0">
                             Enter the Lanes
                         </span>
                     </a>
                 </div>
-
                 <div class="reveal text-right hidden md:block">
-                    <p class="font-serif italic text-maatrika-maroon text-2xl">“If it feels like it was always yours,
-                        <br>that’s because it was.”</p>
+                    <p class="font-serif italic text-maatrika-maroon text-2xl leading-tight">
+                        “If it feels like it was always yours,<br><span class="pl-12 text-maatrika-gold">that’s because
+                            it was.”</span>
+                    </p>
                 </div>
             </div>
         </section>
+
+
+
 
         <!-- MANIFESTO SECTION -->
         <section class="py-32 px-6 bg-white/20">
