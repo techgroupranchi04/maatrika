@@ -364,96 +364,52 @@
 
 
         <!-- FOOTER: THE ETERNAL LOOM -->
-        <footer class="bg-maatrika-maroon text-maatrika-beige pt-32 pb-12 overflow-hidden relative">
-
-            <!-- Large Background Text (Abstract) -->
-            <div class="absolute inset-0 flex items-center justify-center opacity-[0.02] pointer-events-none">
-                <span class="font-serif text-[40vw] leading-none uppercase">Maatrika</span>
-            </div>
-
-            <div class="container mx-auto px-8 md:px-20 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-4">
-
-                    <!-- Column 1: The Philosophy (Col 1-4) -->
-                    <div class="lg:col-span-4 reveal">
-                        <h4 class="font-serif text-4xl italic mb-8">The craft remains.</h4>
-                        <p class="text-maatrika-beige/60 font-sans font-light text-sm leading-relaxed max-w-xs mb-10">
-                            Real luxury is a quiet conversation between the hands that made it and the soul that wears
-                            it.
-                        </p>
-                        <!-- Newsletter: Minimalist Underline -->
-                        <form class="group relative max-w-xs">
-                            <input type="email" placeholder="Join the Archive"
-                                class="w-full bg-transparent border-b border-maatrika-gold/30 py-3 text-[10px] tracking-[0.3em] uppercase placeholder:text-maatrika-beige/30 focus:border-maatrika-gold focus:ring-0 transition-all duration-700">
-                            <button
-                                class="absolute right-0 bottom-3 text-maatrika-gold opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-2">
-                                Subscribe
-                            </button>
-                        </form>
-                    </div>
-
-                    <!-- Column 2: Vertical Thread Separator (Hidden on Mobile) -->
-                    <div class="hidden lg:flex lg:col-span-1 justify-center">
-                        <div
-                            class="w-[1px] h-full bg-gradient-to-b from-transparent via-maatrika-gold/20 to-transparent">
-                        </div>
-                    </div>
-
-                    <!-- Column 3: The Presence (Col 6-8) -->
-                    <div class="lg:col-span-3 reveal" style="animation-delay: 0.2s;">
-                        <span class="text-maatrika-gold text-[10px] uppercase tracking-[0.5em] block mb-8">The
-                            Presence</span>
-                        <ul class="space-y-6">
-                            <li>
-                                <p class="text-[11px] uppercase tracking-widest text-maatrika-gold/80 mb-2">Atelier</p>
-                                <p class="text-[12px] tracking-widest leading-relaxed">Block A 1503, Windsor
-                                    Troika,<br>Akshayanagar, Bengaluru</p>
-                            </li>
-                            <li>
-                                <p class="text-[11px] uppercase tracking-widest text-maatrika-gold/80 mb-2">Origin</p>
-                                <p class="text-[12px] tracking-widest">Varanasi, India</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Column 4: The Navigation (Col 9-12) -->
-                    <div class="lg:col-span-4 flex flex-col items-start lg:items-end reveal"
-                        style="animation-delay: 0.4s;">
-                        <span
-                            class="text-maatrika-gold text-[10px] uppercase tracking-[0.5em] block mb-8">Navigation</span>
-                        <nav class="flex flex-col gap-4 text-left lg:text-right">
-                            <a href="#"
-                                class="font-serif italic text-2xl hover:text-maatrika-gold transition-colors duration-500">The
-                                Narrative</a>
-                            <a href="#"
-                                class="font-serif italic text-2xl hover:text-maatrika-gold transition-colors duration-500">Pure
-                                Weaves</a>
-                            <a href="#"
-                                class="font-serif italic text-2xl hover:text-maatrika-gold transition-colors duration-500">The
-                                Atelier</a>
-                            <a href="#"
-                                class="font-serif italic text-2xl hover:text-maatrika-gold transition-colors duration-500">Contact</a>
-                        </nav>
-                    </div>
-
+        <footer class="bg-maatrika-beige ">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 pt-20 pb-12">
+                <!-- Address -->
+                <div class="reveal">
+                    <h4 class="font-serif text-3xl text-maatrika-maroon mb-4 italic">The Presence</h4>
+                    <p class="text-[11px] uppercase tracking-[0.3em] leading-loose text-gray-800">
+                        House of Maatrika, Block A 1503,<br>
+                        Windsor Troika, Akshayanagar,<br>
+                        Bengaluru, Karnataka 560114
+                    </p>
                 </div>
 
-                <!-- Bottom Copyright Area -->
-                <div
-                    class="mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-                    <div class="flex gap-12">
-                        <a href="#"
-                            class="text-[10px] tracking-[0.4em] text-maatrika-gold/90 hover:text-maatrika-gold transition-colors uppercase">Instagram</a>
-                        <a href="#"
-                            class="text-[10px] tracking-[0.4em] text-maatrika-gold/90 hover:text-maatrika-gold transition-colors uppercase">Facebook</a>
+                <!-- Central Logo -->
+                <div class="flex flex-col items-center justify-center reveal">
+                    <img src="assets/images/logo.png" class="h-28" alt="Logo">
+                    <p class="text-[11px] tracking-[0.5em] text-gray-800">© 2026 HOUSE OF MAATRIKA</p>
+                </div>
+
+                <!-- QR/Social - image_e08719.jpg -->
+                <div class="flex flex-col items-center md:items-end space-y-10 reveal">
+                    <div class="flex space-x-6">
+                        <div class="text-center group cursor-pointer">
+                            <div
+                                class="w-24 h-24 border border-maatrika-gold mb-4 flex items-center justify-center group-hover:bg-maatrika-gold transition-colors duration-500">
+                                <img src="assets/images/maatrika-instagram.png" alt="Instagram"
+                                    class="group-hover:filter-none filter grayscale">
+                            </div>
+                            <p class="text-[9px] uppercase tracking-widest text-gray-600">Instagram</p>
+                        </div>
+                        <div class="text-center group cursor-pointer">
+                            <div
+                                class="w-24 h-24 border border-maatrika-gold mb-4 flex items-center justify-center group-hover:bg-maatrika-gold transition-colors duration-500">
+                                <img src="assets/images/maatrika-facebook.png" alt="Facebook"
+                                    class="group-hover:filter-none filter grayscale">
+                            </div>
+                            <p class="text-[9px] uppercase tracking-widest text-gray-600">Facebook</p>
+                        </div>
+                        <div class="text-center group cursor-pointer">
+                            <div
+                                class="w-24 h-24 border border-maatrika-gold mb-4 flex items-center justify-center group-hover:bg-maatrika-gold transition-colors duration-500">
+                                <img src="assets/images/maatrika-map.png" alt="Location"
+                                    class="group-hover:filter-none filter grayscale">
+                            </div>
+                            <p class="text-[9px] uppercase tracking-widest text-gray-600">Location</p>
+                        </div>
                     </div>
-
-                    <img src="assets/images/logo.png"
-                        class="h-12 opacity-40 grayscale hover:grayscale-0 transition-all duration-1000" alt="Logo">
-
-                    <p class="text-[9px] tracking-[0.5em] text-maatrika-gold/90 uppercase">
-                        © 2026 House of Maatrika
-                    </p>
                 </div>
             </div>
         </footer>
