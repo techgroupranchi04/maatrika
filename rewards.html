@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of Maatrika | Heritage in Every Thread</title>
+
+    <!-- Frameworks -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Luxury Typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@200;400;600&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'maatrika-gold': '#B08D3E',
+                        'maatrika-maroon': '#7A0A24',
+                        'maatrika-beige': '#F3EFE3', /* Raw Silk / Aged Paper tone */
+                        'maatrika-green': '#005E3C',
+                    },
+                    fontFamily: {
+                        'serif': ['"Cormorant Garamond"', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* * {
+            outline: 1px solid red;
+        } */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        /* Mobile Menu Transitions */
+        #mobile-menu {
+            transition: visibility 0.8s, opacity 0.8s;
+        }
+    </style>
+</head>
+
+<body class="bg-maatrika-beige overflow-x-hidden selection:bg-maatrika-gold selection:text-white">
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[70] bg-maatrika-beige invisible opacity-0 flex flex-col items-center justify-center space-y-10 text-center px-6">
+        <button id="close-menu" class="absolute top-8 right-8 text-maatrika-maroon">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <div class="space-y-8">
+            <a href="narrative.html"
+                class="block font-serif text-5xl text-maatrika-maroon italic hover:text-maatrika-gold transition-colors">The
+                Narrative</a>
+            <a href="weave.html"
+                class="block font-serif text-5xl text-maatrika-maroon italic hover:text-maatrika-gold transition-colors">The
+                Pure Weave</a>
+            <a href="rewards.html"
+                class="block font-serif text-5xl text-maatrika-maroon italic hover:text-maatrika-gold transition-colors">Heritage
+                Rewards</a>
+            <a href="atelier.html"
+                class="block font-serif text-5xl text-maatrika-maroon italic hover:text-maatrika-gold transition-colors">The
+                Atelier</a>
+        </div>
+
+        <img src="assets/images/logo.png" alt="Divider" class="w-24 opacity-30 mt-8">
+    </div>
+
+    <!-- MAIN SAREE FRAME -->
+    <div class="min-h-screen flex flex-col relative">
+
+        <!-- STICKY NAVIGATION -->
+        <nav id="main-nav" class="sticky top-0 z-50 bg-maatrika-beige border-b border-maatrika-gold/10 py-2">
+
+            <div class="container mx-auto px-6 flex justify-between items-center border-b border-maatrika-gold/20 pb-2">
+                <!-- Phone and whatsapp -->
+                <div>
+                    <a href="tel:+918904799757"
+                        class="text-[10px] tracking-[0.4em] uppercase font-semibold text-gray-500 hover:text-maatrika-maroon transition">Call
+                        Us</a>
+                    <span class="mx-2 text-gray-300">|</span>
+                    <a href="https://wa.me/918904799757" target="_blank"
+                        class="text-[10px] tracking-[0.4em] uppercase font-semibold text-gray-500 hover:text-maatrika-maroon transition">WhatsApp</a>
+                </div>
+                <!-- Email  -->
+                <div>
+                    <a href="mailto:services@houseofmaatrika.in"  target="_blank"
+                        class="text-[10px] tracking-[0.4em] uppercase font-semibold text-gray-500 hover:text-maatrika-maroon transition">Email
+                        Us</a>
+                </div>
+            </div>
+
+
+            <div class="container mx-auto px-6 flex justify-between items-center">
+                <!-- Desktop Left Nav -->
+                <div
+                    class="hidden lg:flex space-x-12 text-[10px] tracking-[0.4em] uppercase font-semibold text-gray-500  reveal">
+                    <a href="narrative.html" class="hover:text-maatrika-maroon transition">The Narrative</a>
+                    <a href="weave.html" class="hover:text-maatrika-maroon transition">The Pure Weave</a>
+                </div>
+
+                <!-- CENTRAL LOGO - image_e08778.jpg -->
+                <a href="index.html" class="block reveal">
+                    <img src="assets/images/logo.png" alt="House of Maatrika"
+                        class="h-14 md:h-20 lg:h-24 transition-all duration-500">
+                </a>
+
+                <!-- Desktop Right Nav -->
+                <div
+                    class="hidden lg:flex space-x-12 text-[10px] tracking-[0.4em] uppercase font-semibold text-gray-500  reveal">
+                    <a href="rewards.html" class="hover:text-maatrika-maroon transition">Rewards</a>
+                    <a href="atelier.html" class="hover:text-maatrika-maroon transition">Atelier</a>
+                </div>
+
+                <!-- MOBILE TOGGLE -->
+                <button id="menu-toggle" class="lg:hidden text-maatrika-maroon">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- REWARDS SECTION: THE MAATRIKA CIRCLE -->
+        <section id="rewards" class="relative py-32 px-8 md:px-20 bg-white overflow-hidden">
+
+            <!-- Vertical Side Label -->
+            <div class="absolute right-5 top-1/2 -translate-y-1/2 hidden lg:block opacity-10">
+                <p
+                    class="font-serif text-8xl uppercase tracking-widest [writing-mode:vertical-rl] text-maatrika-maroon">
+                    Membership
+                </p>
+            </div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <!-- Header -->
+                <div class="max-w-2xl mb-20 reveal">
+                    <span class="text-maatrika-gold text-xs uppercase tracking-[0.6em] mb-4 block">Loyalty as a
+                        Legacy</span>
+                    <h2 class="font-serif text-5xl md:text-7xl text-maatrika-maroon leading-tight mb-8">
+                        The Maatrika <span class="italic font-light">Circle.</span>
+                    </h2>
+                    <p class="text-gray-600 font-sans font-light leading-loose">
+                        Membership at House of Maatrika is not earned through points, but through a shared devotion to
+                        the craft.
+                        Enter a circle where the rewards are as timeless as the weaves.
+                    </p>
+                </div>
+
+                <!-- Tiered Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Tier 1: The Seeker -->
+                    <div class="group border border-maatrika-beige p-10 hover:border-maatrika-gold transition-all duration-700 reveal"
+                        style="animation-delay: 0.1s;">
+                        <span class="text-maatrika-gold font-serif text-4xl italic block mb-6">I</span>
+                        <h3 class="font-sans text-[10px] tracking-[0.4em] uppercase text-maatrika-maroon mb-2">The
+                            Seeker</h3>
+                        <p class="text-[11px] text-gray-400 uppercase tracking-widest mb-10">Entry level</p>
+
+                        <ul class="space-y-4 mb-12">
+                            <li class="text-xs tracking-wider text-gray-600 flex gap-3">
+                                <span class="text-maatrika-gold">•</span> Early access to new collections.
+                            </li>
+                            <li class="text-xs tracking-wider text-gray-600 flex gap-3">
+                                <span class="text-maatrika-gold">•</span> Personalized styling consultations.
+                            </li>
+                        </ul>
+                        <div class="h-[1px] w-0 bg-maatrika-gold group-hover:w-full transition-all duration-700"></div>
+                    </div>
+
+                    <!-- Tier 2: The Custodian -->
+                    <div class="group bg-maatrika-beige/30 border border-maatrika-gold/20 p-10 relative overflow-hidden reveal"
+                        style="animation-delay: 0.3s;">
+                        <!-- Subtle background accent -->
+                        <div class="absolute -right-10 -top-10 text-maatrika-gold/10 font-serif text-9xl italic">II
+                        </div>
+
+                        <span class="text-maatrika-gold font-serif text-4xl italic block mb-6">II</span>
+                        <h3 class="font-sans text-[10px] tracking-[0.4em] uppercase text-maatrika-maroon mb-2">The
+                            Custodian</h3>
+                        <p class="text-[11px] text-maatrika-green uppercase tracking-widest mb-10">Preferred Patron</p>
+
+                        <ul class="space-y-4 mb-12">
+                            <li class="text-xs tracking-wider text-gray-600 flex gap-3">
+                                <span class="text-maatrika-gold">•</span> Complimentary Heirloom Polishing.
+                            </li>
+                            <li class="text-xs tracking-wider text-gray-600 flex gap-3">
+                                <span class="text-maatrika-gold">•</span> Invitations to Private Atelier viewings.
+                            </li>
+                            <li class="text-xs tracking-wider text-gray-600 flex gap-3">
+                                <span class="text-maatrika-gold">•</span> Priority for Bespoke weave requests.
+                            </li>
+                        </ul>
+                        <div class="h-[1px] w-full bg-maatrika-gold"></div>
+                    </div>
+
+                    <!-- Tier 3: The Connoisseur -->
+                    <div class="group bg-maatrika-maroon p-10 text-maatrika-beige reveal"
+                        style="animation-delay: 0.5s;">
+                        <span class="text-maatrika-gold font-serif text-4xl italic block mb-6">III</span>
+                        <h3 class="font-sans text-[10px] tracking-[0.4em] uppercase text-maatrika-gold mb-2">The
+                            Connoisseur</h3>
+                        <p class="text-[11px] text-maatrika-gold/50 uppercase tracking-widest mb-10">Legacy Member</p>
+
+                        <ul class="space-y-4 mb-12">
+                            <li class="text-xs tracking-wider opacity-80 flex gap-3">
+                                <span class="text-maatrika-gold">•</span> Annual 'Craft Retreat' in Varanasi.
+                            </li>
+                            <li class="text-xs tracking-wider opacity-80 flex gap-3">
+                                <span class="text-maatrika-gold">•</span> Lifetime Restoration Guarantee.
+                            </li>
+                            <li class="text-xs tracking-wider opacity-80 flex gap-3">
+                                <span class="text-maatrika-gold">•</span> Private Archives Access.
+                            </li>
+                        </ul>
+                        <a href="#"
+                            class="inline-block text-[9px] tracking-[0.5em] uppercase border-b border-maatrika-gold pb-1 hover:text-white transition-colors">
+                            Claim your Seat
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Call to Action -->
+                <div class="mt-20 text-center reveal">
+                    <p class="text-xs tracking-[0.4em] text-gray-400 uppercase mb-8">Ready to begin your legacy?</p>
+                    <a href="#"
+                        class="group relative inline-block px-16 py-5 overflow-hidden border border-maatrika-maroon text-maatrika-maroon">
+                        <span
+                            class="relative z-10 uppercase text-[10px] tracking-[0.5em] group-hover:text-white transition-colors duration-500">
+                            Join the Circle
+                        </span>
+                        <div
+                            class="absolute inset-0 bg-maatrika-maroon translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- FOOTER: THE ETERNAL LOOM -->
+        <footer class="bg-maatrika-beige ">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 pt-20 pb-12">
+                <!-- Address -->
+                <div class="reveal">
+                    <h4 class="font-serif text-3xl text-maatrika-maroon mb-4 italic">The Presence</h4>
+                    <p class="text-[11px] uppercase tracking-[0.3em] leading-loose text-gray-800">
+                        House of Maatrika, Block A 1503,<br>
+                        Windsor Troika, Akshayanagar,<br>
+                        Bengaluru, Karnataka 560114
+                    </p>
+                </div>
+
+                <!-- Central Logo -->
+                <div class="flex flex-col items-center justify-center reveal">
+                    <img src="assets/images/logo.png" class="h-28" alt="Logo">
+                    <p class="text-[11px] tracking-[0.5em] text-gray-800">© 2026 HOUSE OF MAATRIKA</p>
+                </div>
+
+                <!-- QR/Social - image_e08719.jpg -->
+                <div class="flex flex-col items-center md:items-end space-y-10 reveal">
+                    <div class="flex space-x-6">
+                        <div class="text-center group cursor-pointer">
+                            <div
+                                class="w-24 h-24 border border-maatrika-gold mb-4 flex items-center justify-center group-hover:bg-maatrika-gold transition-colors duration-500">
+                                <img src="assets/images/maatrika-instagram.png" alt="Instagram"
+                                    class="group-hover:filter-none filter grayscale">
+                            </div>
+                            <p class="text-[9px] uppercase tracking-widest text-gray-600">Instagram</p>
+                        </div>
+                        <div class="text-center group cursor-pointer">
+                            <div
+                                class="w-24 h-24 border border-maatrika-gold mb-4 flex items-center justify-center group-hover:bg-maatrika-gold transition-colors duration-500">
+                                <img src="assets/images/maatrika-facebook.png" alt="Facebook"
+                                    class="group-hover:filter-none filter grayscale">
+                            </div>
+                            <p class="text-[9px] uppercase tracking-widest text-gray-600">Facebook</p>
+                        </div>
+                        <div class="text-center group cursor-pointer">
+                            <div
+                                class="w-24 h-24 border border-maatrika-gold mb-4 flex items-center justify-center group-hover:bg-maatrika-gold transition-colors duration-500">
+                                <img src="assets/images/maatrika-map.png" alt="Location"
+                                    class="group-hover:filter-none filter grayscale">
+                            </div>
+                            <p class="text-[9px] uppercase tracking-widest text-gray-600">Location</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Mobile Menu Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        const menuTl = gsap.timeline({ paused: true });
+
+        menuTl.to(mobileMenu, {
+            duration: 0.6,
+            autoAlpha: 1,
+            ease: "expo.inOut"
+        })
+            .from("#mobile-menu a", {
+                y: 40,
+                opacity: 0,
+                stagger: 0.1,
+                duration: 0.6,
+                ease: "power3.out"
+            }, "-=0.3");
+
+        menuToggle.addEventListener('click', () => menuTl.play());
+        closeMenu.addEventListener('click', () => menuTl.reverse());
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => menuTl.reverse());
+        });
+
+        // Scroll Reveal Logic
+        const reveals = gsap.utils.toArray('.reveal');
+        reveals.forEach((el) => {
+            gsap.to(el, {
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 90%",
+                    toggleActions: "play none none reverse"
+                },
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: "power2.out"
+            });
+        });
+
+        // Navbar Shrink on Scroll
+        ScrollTrigger.create({
+            start: "top -50",
+            onEnter: () => gsap.to("#main-nav", { py: 3, duration: 0.4 }),
+            onLeaveBack: () => gsap.to("#main-nav", { py: 6, duration: 0.4 })
+        });
+    </script>
+</body>
+
+</html>

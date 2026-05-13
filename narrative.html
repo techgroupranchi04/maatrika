@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of Maatrika | Heritage in Every Thread</title>
+
+    <!-- Frameworks -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Luxury Typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@200;400;600&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'maatrika-gold': '#B08D3E',
+                        'maatrika-maroon': '#7A0A24',
+                        'maatrika-beige': '#F3EFE3', /* Raw Silk / Aged Paper tone */
+                        'maatrika-green': '#005E3C',
+                    },
+                    fontFamily: {
+                        'serif': ['"Cormorant Garamond"', 'serif'],
+                        'sans': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* * {
+            outline: 1px solid red;
+        } */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        /* Mobile Menu Transitions */
+        #mobile-menu {
+            transition: visibility 0.8s, opacity 0.8s;
+        }
+    </style>
+</head>
+
+<body class="bg-maatrika-beige overflow-x-hidden selection:bg-maatrika-gold selection:text-white">
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[70] bg-maatrika-beige invisible opacity-0 flex flex-col items-center justify-center space-y-10 text-center px-6">
+        <button id="close-menu" class="absolute top-8 right-8 text-maatrika-maroon">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <div class="space-y-8">
+            <a href="narrative.html"
+                class="block font-serif text-5xl text-maatrika-maroon italic hover:text-maatrika-gold transition-colors">The
+                Narrative</a>
+            <a href="weave.html"
+                class="block font-serif text-5xl text-maatrika-maroon italic hover:text-maatrika-gold transition-colors">The
+                Pure Weave</a>
+            <a href="rewards.html"
+                class="block font-serif text-5xl text-maatrika-maroon italic hover:text-maatrika-gold transition-colors">Heritage
+                Rewards</a>
+            <a href="atelier.html"
+                class="block font-serif text-5xl text-maatrika-maroon italic hover:text-maatrika-gold transition-colors">The
+                Atelier</a>
+        </div>
+
+        <img src="assets/images/logo.png" alt="Divider" class="w-24 opacity-30 mt-8">
+    </div>
+
+    <!-- MAIN SAREE FRAME -->
+    <div class="min-h-screen flex flex-col relative">
+
+        <!-- STICKY NAVIGATION -->
+        <nav id="main-nav" class="sticky top-0 z-50 bg-maatrika-beige border-b border-maatrika-gold/10 py-2">
+
+            <div class="container mx-auto px-6 flex justify-between items-center border-b border-maatrika-gold/20 pb-2">
+                <!-- Phone and whatsapp -->
+                <div>
+                    <a href="tel:+918904799757"
+                        class="text-[10px] tracking-[0.4em] uppercase font-semibold text-gray-500 hover:text-maatrika-maroon transition">Call
+                        Us</a>
+                    <span class="mx-2 text-gray-300">|</span>
+                    <a href="https://wa.me/918904799757" target="_blank"
+                        class="text-[10px] tracking-[0.4em] uppercase font-semibold text-gray-500 hover:text-maatrika-maroon transition">WhatsApp</a>
+                </div>
+                <!-- Email  -->
+                <div>
+                    <a href="mailto:services@houseofmaatrika.in"  target="_blank"
+                        class="text-[10px] tracking-[0.4em] uppercase font-semibold text-gray-500 hover:text-maatrika-maroon transition">Email
+                        Us</a>
+                </div>
+            </div>
+
+
+            <div class="container mx-auto px-6 flex justify-between items-center">
+                <!-- Desktop Left Nav -->
+                <div
+                    class="hidden lg:flex space-x-12 text-[10px] tracking-[0.4em] uppercase font-semibold text-gray-500  reveal">
+                    <a href="narrative.html" class="hover:text-maatrika-maroon transition">The Narrative</a>
+                    <a href="weave.html" class="hover:text-maatrika-maroon transition">The Pure Weave</a>
+                </div>
+
+                <!-- CENTRAL LOGO - image_e08778.jpg -->
+                <a href="index.html" class="block reveal">
+                    <img src="assets/images/logo.png" alt="House of Maatrika"
+                        class="h-14 md:h-20 lg:h-24 transition-all duration-500">
+                </a>
+
+                <!-- Desktop Right Nav -->
+                <div
+                    class="hidden lg:flex space-x-12 text-[10px] tracking-[0.4em] uppercase font-semibold text-gray-500  reveal">
+                    <a href="rewards.html" class="hover:text-maatrika-maroon transition">Rewards</a>
+                    <a href="atelier.html" class="hover:text-maatrika-maroon transition">Atelier</a>
+                </div>
+
+                <!-- MOBILE TOGGLE -->
+                <button id="menu-toggle" class="lg:hidden text-maatrika-maroon">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- NARRATIVE SECTION -->
+        <section
+            class="relative min-h-screen flex flex-col justify-between py-12 px-8 md:px-20 overflow-hidden bg-maatrika-beige">
+
+
+            <!-- Background Label (Rotated) -->
+            <div class="absolute top-20 left-0 hidden lg:block opacity-[0.03] pointer-events-none">
+                <h2
+                    class="text-[15rem] font-serif text-maatrika-maroon uppercase tracking-tighter origin-top-left rotate-90">
+                    Narrative
+                </h2>
+            </div>
+
+            <div class="container mx-auto px-8 md:px-20 relative z-10">
+
+                <!-- Part 1: The Origin -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-32 md:mb-56">
+                    <div class="lg:col-span-5 reveal">
+                        <span class="text-maatrika-gold text-xs uppercase tracking-[0.6em] mb-6 block">The Origin</span>
+                        <h2 class="font-serif text-5xl md:text-7xl text-maatrika-maroon leading-tight mb-8">
+                            In the lanes of <br>
+                            <span class="italic font-light">Varanasi.</span>
+                        </h2>
+                        <p class="text-maatrika-maroon/80 font-sans font-light text-lg leading-loose max-w-md">
+                            Generations of artisans have been quietly perfecting a craft the world once paused to
+                            admire.
+                            No shortcuts. No noise. Just skill, passed down, thread by thread.
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-6 lg:col-start-7 reveal" style="animation-delay: 0.3s;">
+                        <div class="relative group">
+                            <!-- Main Narrative Image -->
+                            <div class="aspect-[4/5] overflow-hidden">
+                                <img src="assets/images/narrative1.webp"
+                                    class="w-full h-full object-cover transition-all duration-[2000ms] scale-110 group-hover:scale-100"
+                                    alt="Detail of Banarasi weaving">
+                            </div>
+                            <!-- Floating Caption -->
+                            <div class="absolute -bottom-8 -right-8 bg-white p-8 shadow-2xl max-w-xs hidden md:block">
+                                <p class="font-serif italic text-maatrika-maroon text-xl">
+                                    "Untouched, rare, and alive with the hands that made it".
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Part 2: The Philosophy -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-4 lg:order-2 reveal">
+                        <span class="text-maatrika-gold text-xs uppercase tracking-[0.6em] mb-6 block">The
+                            Philosophy</span>
+                        <h3 class="font-serif text-4xl text-maatrika-maroon italic mb-8">
+                            Unapologetically <br>Original.
+                        </h3>
+                        <div class="space-y-6 text-maatrika-maroon/70 font-sans font-light leading-relaxed">
+                            <p>
+                                At House of Maatrika, we don’t just curate Banarasi sarees. We revive generational
+                                artistry
+                                in its purest form. Every weave we bring is rare and alive.
+                            </p>
+                            <p>
+                                We don’t do fast fashion. We do Banarasi the way it was always meant to be—pure,
+                                rare, and without diluting it to fit trends.
+                            </p>
+                        </div>
+
+                        <!-- CTA -->
+                        <div class="mt-12">
+                            <a href="#" class="group inline-flex items-center gap-6">
+                                <div class="w-12 h-[1px] bg-maatrika-gold group-hover:w-20 transition-all duration-700">
+                                </div>
+                                <span class="text-maatrika-maroon uppercase text-[10px] tracking-[0.4em]">The Pure
+                                    Weave</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Staggered Image Gallery -->
+                    <div class="lg:col-span-7 lg:order-1 reveal">
+                        <div class="relative grid grid-cols-2 gap-4">
+                            <div class="pt-20">
+                                <img src="assets/images/narrative2.jpg" class="w-full aspect-[3/4] object-cover"
+                                    alt="Silk thread detail">
+                            </div>
+                            <div>
+                                <img src="assets/images/narrative3.webp"
+                                    class="w-full aspect-[3/4] object-cover shadow-xl" alt="Saree in motion">
+                            </div>
+
+                            <!-- Floating Quote Overlay -->
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <p
+                                    class="font-serif text-6xl md:text-8xl text-white/20 mix-blend-difference select-none">
+                                    Authenticity
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- FOOTER: THE ETERNAL LOOM -->
+        <footer class="bg-maatrika-beige ">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 pt-20 pb-12">
+                <!-- Address -->
+                <div class="reveal">
+                    <h4 class="font-serif text-3xl text-maatrika-maroon mb-4 italic">The Presence</h4>
+                    <p class="text-[11px] uppercase tracking-[0.3em] leading-loose text-gray-800">
+                        House of Maatrika, Block A 1503,<br>
+                        Windsor Troika, Akshayanagar,<br>
+                        Bengaluru, Karnataka 560114
+                    </p>
+                </div>
+
+                <!-- Central Logo -->
+                <div class="flex flex-col items-center justify-center reveal">
+                    <img src="assets/images/logo.png" class="h-28" alt="Logo">
+                    <p class="text-[11px] tracking-[0.5em] text-gray-800">© 2026 HOUSE OF MAATRIKA</p>
+                </div>
+
+                <!-- QR/Social - image_e08719.jpg -->
+                <div class="flex flex-col items-center md:items-end space-y-10 reveal">
+                    <div class="flex space-x-6">
+                        <div class="text-center group cursor-pointer">
+                            <div
+                                class="w-24 h-24 border border-maatrika-gold mb-4 flex items-center justify-center group-hover:bg-maatrika-gold transition-colors duration-500">
+                                <img src="assets/images/maatrika-instagram.png" alt="Instagram"
+                                    class="group-hover:filter-none filter grayscale">
+                            </div>
+                            <p class="text-[9px] uppercase tracking-widest text-gray-600">Instagram</p>
+                        </div>
+                        <div class="text-center group cursor-pointer">
+                            <div
+                                class="w-24 h-24 border border-maatrika-gold mb-4 flex items-center justify-center group-hover:bg-maatrika-gold transition-colors duration-500">
+                                <img src="assets/images/maatrika-facebook.png" alt="Facebook"
+                                    class="group-hover:filter-none filter grayscale">
+                            </div>
+                            <p class="text-[9px] uppercase tracking-widest text-gray-600">Facebook</p>
+                        </div>
+                        <div class="text-center group cursor-pointer">
+                            <div
+                                class="w-24 h-24 border border-maatrika-gold mb-4 flex items-center justify-center group-hover:bg-maatrika-gold transition-colors duration-500">
+                                <img src="assets/images/maatrika-map.png" alt="Location"
+                                    class="group-hover:filter-none filter grayscale">
+                            </div>
+                            <p class="text-[9px] uppercase tracking-widest text-gray-600">Location</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Mobile Menu Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        const menuTl = gsap.timeline({ paused: true });
+
+        menuTl.to(mobileMenu, {
+            duration: 0.6,
+            autoAlpha: 1,
+            ease: "expo.inOut"
+        })
+            .from("#mobile-menu a", {
+                y: 40,
+                opacity: 0,
+                stagger: 0.1,
+                duration: 0.6,
+                ease: "power3.out"
+            }, "-=0.3");
+
+        menuToggle.addEventListener('click', () => menuTl.play());
+        closeMenu.addEventListener('click', () => menuTl.reverse());
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => menuTl.reverse());
+        });
+
+        // Scroll Reveal Logic
+        const reveals = gsap.utils.toArray('.reveal');
+        reveals.forEach((el) => {
+            gsap.to(el, {
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 90%",
+                    toggleActions: "play none none reverse"
+                },
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: "power2.out"
+            });
+        });
+
+        // Navbar Shrink on Scroll
+        ScrollTrigger.create({
+            start: "top -50",
+            onEnter: () => gsap.to("#main-nav", { py: 3, duration: 0.4 }),
+            onLeaveBack: () => gsap.to("#main-nav", { py: 6, duration: 0.4 })
+        });
+    </script>
+</body>
+
+</html>
